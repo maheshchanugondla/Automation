@@ -8,7 +8,7 @@ done < input.csv
 echo "Displaying the contents of array mapped from csv file:"
 index=0
 for record in "${arr_csv[@]}"; do
-    disk_usage=$(df -h)
+    disk_usage=$(df -i)
     echo "Record at index-${index} : $record"
     ((index++))
 	done
