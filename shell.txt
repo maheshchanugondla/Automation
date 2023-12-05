@@ -1,0 +1,62 @@
+
+
+#!/bin/bash 
+# Execute the command and store the output in a variable
+output=$(here we need to add the command )
+
+# Print the output
+echo "Output using \$() syntax:"
+echo "$output"
+
+
+#!/bin/bash
+
+# 
+
+# Specify the file path
+file_path="users.txt"
+
+# Check if the file exists
+if [ ! -f "$file_path" ]; then
+  echo "File '$file_path' does not exist."
+  exit 1
+fi
+
+# Prompt for username
+read -p "Enter username: " input_username
+
+# Prompt for password (you may want to use a more secure method for handling passwords)
+read -s -p "Enter password: " input_password
+
+echo   # Move to the next line after entering the password
+
+# Validate the input against the file content
+if grep -q "^$input_username:$input_password$" "$file_path"; then
+  echo "Login successful."
+else
+  echo "Invalid username or password."
+fi
+
+
+#uname_passwd_details 
+username--
+password-
+
+
+list_devices=$ mkdir folder1 |grep vim list_devices 
+
+
+
+# Execute the command and store the output in a variable
+disk_usage=$(df -h)
+
+# Filter and store entries with disk usage greater than 90%
+filtered_output=$(echo "$disk_usage" | awk 'NR>1 && NF{sub(/%/,"",$); if ($disk_usage >= 90) print}')
+
+# Print the original output
+echo "Original Disk Usage:"
+echo "$disk_usage"
+
+# Print the filtered output
+echo -e "\nFiltered Disk Usage (greater than 90%):"
+echo "$filtered_output"
